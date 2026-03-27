@@ -115,7 +115,7 @@ export const SqlAuditPanel = observer<Props>(function SqlAuditPanel({ auditTab }
               <TableItem item="auditDesc" selectOnItem>
                 <TableColumnValue align = "center" ><SqlAuditLevel level = {node.level}/></TableColumnValue>
                 <TableColumnValue>{node.message}</TableColumnValue>
-                { node.rule_name && <TableColumnValue onClick={ () =>(window.open("/rule/knowledge/"+ node.rule_name + "?db_type="+ data.taskInfo?.instance_db_type))} ><ExportOutlined/></TableColumnValue> }
+                { node.rule_name && <TableColumnValue onClick={ () =>(window.open("/sqle/rule/knowledge/"+ node.rule_name + "/"+ data.taskInfo?.instance_db_type))} ><ExportOutlined/></TableColumnValue> }
               </TableItem>
             ))}
           </TableBody>
